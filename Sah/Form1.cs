@@ -103,10 +103,14 @@ namespace Sah
                 {
 
                     piesa[0, j].Image = Image.FromFile(@"..\..\Piese\" + (j - x).ToString() + ".png");
+                    piesa[0, j].CuloarePiesa = false;
                     x += 2;
                 }
                 else
+                {
                     piesa[0, j].Image = Image.FromFile(@"..\..\Piese\" + j.ToString() + ".png");
+                    piesa[0, j].CuloarePiesa = false;
+                }
             }
             x = 3;
             for (int j = 5; j < 13; j++)
@@ -115,44 +119,48 @@ namespace Sah
                 {
 
                     piesa[3, j - 5].Image = Image.FromFile(@"..\..\Piese\" + (j - x).ToString() + ".png");
+                    piesa[3, j - 5].CuloarePiesa = true;
                     x += 2;
                 }
                 else
+                {
                     piesa[3, j - 5].Image = Image.FromFile(@"..\..\Piese\" + j.ToString() + ".png");
+                    piesa[3, j - 5].CuloarePiesa = true;
+                }
             }
 
         }
 
-        int apasat = 0;
-        Piesa piesaApasat;
+        /*        int apasat = 0;
+                Piesa piesaApasat;
 
-        public void Patrat_Click(object sender, EventArgs e)
-        {
-            Patrat patrat = (Patrat)sender;
-            if (apasat == 1)
-            {
-                piesaApasat.Location = patrat.Location;
-                piesaApasat.BackColor = patrat.BackColor;
-                apasat = 0;
-            }
-        }
+                public void Patrat_Click(object sender, EventArgs e)
+                {
+                    Patrat patrat = (Patrat)sender;
+                    if (apasat == 1)
+                    {
+                        piesaApasat.Location = patrat.Location;
+                        piesaApasat.BackColor = patrat.BackColor;
+                        apasat = 0;
+                    }
+                }
 
-        public void Piesa_Click(object sender, EventArgs e)
-        {
-            Piesa piesa = (Piesa)sender;
-            piesa.BackColor = Color.AliceBlue;
-            apasat++;
-            if (apasat == 2)
-            {
-                piesaApasat.Location = piesa.Location;
-                piesaApasat.BackColor = piesa.BackColor;
-                piesa.Dispose();
-                apasat = 0;
-            }
-            else
-                piesaApasat = piesa;
+                public void Piesa_Click(object sender, EventArgs e)
+                {
+                    Piesa piesa = (Piesa)sender;
+                    piesa.BackColor = Color.AliceBlue;
+                    apasat++;
+                    if (apasat == 2)
+                    {
+                        piesaApasat.Location = piesa.Location;
+                        piesaApasat.BackColor = piesa.BackColor;
+                        piesa.Dispose();
+                        apasat = 0;
+                    }
+                    else
+                        piesaApasat = piesa;
+                }
+            */
 
-
-        }
     }
 }

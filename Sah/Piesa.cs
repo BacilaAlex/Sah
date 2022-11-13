@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -24,7 +25,6 @@ namespace Sah
 
 
         private static Piesa piesaApasata1 = null;
-
         public void Piesa_Click(object sender, EventArgs e)
         {
 
@@ -37,9 +37,18 @@ namespace Sah
             else if (statePiesa == true)
             {
                 Piesa piesaApasata2 = this;
-                piesaApasata1.BackColor = piesaApasata2.BackColor;
-                piesaApasata1.Location = piesaApasata2.Location;
-                piesaApasata2.Dispose();
+                if (piesaApasata1.culoarePiesa != piesaApasata2.culoarePiesa)
+                {
+                    piesaApasata1.BackColor = piesaApasata2.BackColor;
+                    piesaApasata1.Location = piesaApasata2.Location;
+                    piesaApasata1 = null;
+                    piesaApasata2.Dispose();
+                }
+                else if(piesaApasata1.culoarePiesa == piesaApasata2.culoarePiesa)
+                {
+                    piesaApasata1.BackColor = Color.WhiteSmoke;
+                    piesaApasata1 = null;
+                }
                 statePiesa = false;
             }
         }
