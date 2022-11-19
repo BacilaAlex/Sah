@@ -9,3 +9,14 @@ D:\Visual Saves\Sah\Sah\obj\Debug\Sah.csproj.CoreCompileInputs.cache
 D:\Visual Saves\Sah\Sah\obj\Debug\Sah.exe
 D:\Visual Saves\Sah\Sah\obj\Debug\Sah.pdb
 D:\Visual Saves\Sah\Sah\obj\Debug\Sah.Form1.resources
+D:\Visual Saves\Sah2\Sah\Sah\bin\Debug\Sah.exe.config
+D:\Visual Saves\Sah2\Sah\Sah\bin\Debug\Sah.exe
+D:\Visual Saves\Sah2\Sah\Sah\bin\Debug\Sah.pdb
+D:\Visual Saves\Sah2\Sah\Sah\obj\Debug\Sah.csproj.AssemblyReference.cache
+D:\Visual Saves\Sah2\Sah\Sah\obj\Debug\Sah.csproj.SuggestedBindingRedirects.cache
+D:\Visual Saves\Sah2\Sah\Sah\obj\Debug\Sah.Form1.resources
+D:\Visual Saves\Sah2\Sah\Sah\obj\Debug\Sah.Properties.Resources.resources
+D:\Visual Saves\Sah2\Sah\Sah\obj\Debug\Sah.csproj.GenerateResource.cache
+D:\Visual Saves\Sah2\Sah\Sah\obj\Debug\Sah.csproj.CoreCompileInputs.cache
+D:\Visual Saves\Sah2\Sah\Sah\obj\Debug\Sah.exe
+D:\Visual Saves\Sah2\Sah\Sah\obj\Debug\Sah.pdb

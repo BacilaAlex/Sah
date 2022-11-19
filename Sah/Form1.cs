@@ -62,6 +62,7 @@ namespace Sah
                     piesa[i, j].Size = new Size(80, 80);
                     piesa[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
                     piesa[i, j].BackColor = patrat[i, j].BackColor;
+                    piesa[i, j].CuloarePiesaBackColor = patrat[i, j].BackColor;
 
                     if (i <= 1)
                         piesa[i, j].Location = new Point(80 * j, 80 * i);
@@ -81,9 +82,6 @@ namespace Sah
                             piesa[i, j].CuloarePiesa = true;
                             break;
                     }
-
-
-                    /*piesa[i, j].Click += Piesa_Click;*/
 
                     piesa[i, j].Click += piesa[i, j].Piesa_Click;
 
@@ -128,37 +126,6 @@ namespace Sah
             }
 
         }
-
-        /*        int apasat = 0;
-                Piesa piesaApasat;
-
-                public void Patrat_Click(object sender, EventArgs e)
-                {
-                    Patrat patrat = (Patrat)sender;
-                    if (apasat == 1)
-                    {
-                        piesaApasat.Location = patrat.Location;
-                        piesaApasat.BackColor = patrat.BackColor;
-                        apasat = 0;
-                    }
-                }
-
-                public void Piesa_Click(object sender, EventArgs e)
-                {
-                    Piesa piesa = (Piesa)sender;
-                    piesa.BackColor = Color.AliceBlue;
-                    apasat++;
-                    if (apasat == 2)
-                    {
-                        piesaApasat.Location = piesa.Location;
-                        piesaApasat.BackColor = piesa.BackColor;
-                        piesa.Dispose();
-                        apasat = 0;
-                    }
-                    else
-                        piesaApasat = piesa;
-                }
-            */
 
     }
 }

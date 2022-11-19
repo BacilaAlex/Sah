@@ -5,7 +5,7 @@ namespace Sah
 {
     public class Patrat : Panel
     {
-        int marimePatrat;
+        private int marimePatrat;
         public Patrat(int marimePatrat = 0)
         {
             this.marimePatrat = marimePatrat;
@@ -20,14 +20,15 @@ namespace Sah
 
         public void Patrat_Click(object sender, EventArgs e)
         {
-            if (Piesa.PiesaApasata != null)
+            if (Piesa.PiesaApasata1 != null)
             {
                 if (Piesa.StatePiesa == true)
                 {
-                    piesaApasata1 = Piesa.PiesaApasata;
-                    Patrat patrat = (Patrat)sender;
+                    piesaApasata1 = Piesa.PiesaApasata1;
+                    Patrat patrat = this;
                     piesaApasata1.Location = patrat.Location;
                     piesaApasata1.BackColor = patrat.BackColor;
+                    piesaApasata1.CuloarePiesaBackColor = patrat.BackColor;
                     Piesa.StatePiesa = false;
                 }
             }
