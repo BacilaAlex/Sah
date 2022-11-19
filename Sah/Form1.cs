@@ -6,8 +6,8 @@ namespace Sah
 {
     public partial class Form1 : Form
     {
-        Patrat[,] patrat;
-        Piesa[,] piesa;
+        public Patrat[,] patrat;
+        public Piesa[,] piesa;
         public Form1()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace Sah
 
                 for (int j = 0; j < 8; j++)
                 {
-                    piesa[i, j] = new Piesa();
+                    piesa[i, j] = new Pion();
                     piesa[i, j].Size = new Size(80, 80);
                     piesa[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
                     piesa[i, j].BackColor = patrat[i, j].BackColor;

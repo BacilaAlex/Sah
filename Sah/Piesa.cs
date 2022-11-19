@@ -5,8 +5,13 @@ using System.Windows.Forms;
 
 namespace Sah
 {
-    public class Piesa : PictureBox
+    public abstract class Piesa : PictureBox
     {
+        public Piesa()
+        {
+
+        }
+
         private bool culoarePiesa;
         public bool CuloarePiesa
         {
@@ -35,36 +40,13 @@ namespace Sah
         public static Piesa PiesaApasata1
         {
             get { return piesaApasata1; }
+            set { piesaApasata1 = value; }
         }
 
- 
+        protected abstract void Muta();
         public void Piesa_Click(object sender, EventArgs e)
         {
-
-            if (statePiesa == false)
-            {
-                piesaApasata1 = this;
-                piesaApasata1.BackColor = Color.DodgerBlue;
-                statePiesa = true;
-            }
-            else if (statePiesa == true)
-            {
-                Piesa piesaApasata2 = this;
-                if (piesaApasata1.culoarePiesa != piesaApasata2.culoarePiesa)
-                {
-                    piesaApasata1.BackColor = piesaApasata2.BackColor;
-                    piesaApasata1.Location = piesaApasata2.Location;
-                    piesaApasata1.CuloarePiesaBackColor = piesaApasata2.CuloarePiesaBackColor;
-                    piesaApasata1 = null;
-                    piesaApasata2.Dispose();
-                }
-                else if (piesaApasata1.culoarePiesa == piesaApasata2.culoarePiesa)
-                {
-                    piesaApasata1.BackColor = piesaApasata1.CuloarePiesaBackColor;
-                    piesaApasata1 = null;
-                }
-                statePiesa = false;
-            }
+            Muta();
         }
 
     }
