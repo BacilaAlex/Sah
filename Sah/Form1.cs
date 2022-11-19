@@ -6,6 +6,8 @@ namespace Sah
 {
     public partial class Form1 : Form
     {
+        Patrat[,] patrat;
+        Piesa[,] piesa;
         public Form1()
         {
             InitializeComponent();
@@ -13,7 +15,6 @@ namespace Sah
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             this.Width = 655;
             this.Height = 678;
             Creare_Tabla();
@@ -22,14 +23,13 @@ namespace Sah
 
         public void Creare_Tabla()
         {
-            Patrat[,] patrat = new Patrat[8, 8];
+            patrat = new Patrat[8, 8];
 
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
                 {
                     patrat[i, j] = new Patrat(80);
-
                     patrat[i, j].Size = new Size(patrat[i, j].MarimePatrat, patrat[i, j].MarimePatrat);
                     patrat[i, j].Location = new Point(patrat[i, j].MarimePatrat * j, patrat[i, j].MarimePatrat * i);
 
@@ -38,9 +38,7 @@ namespace Sah
                     else
                         patrat[i, j].BackColor = Color.GreenYellow;
 
-
                     Controls.Add(patrat[i, j]);
-
 
                     patrat[i, j].Click += patrat[i, j].Patrat_Click;
 
@@ -49,11 +47,11 @@ namespace Sah
 
             Creare_Piese(patrat);
         }
+
         public void Creare_Piese(Patrat[,] patrat)
         {
 
-            Piesa[,] piesa = new Piesa[4, 8];
-
+            piesa = new Piesa[4, 8];
 
             for (int i = 0; i < 4; i++)
             {

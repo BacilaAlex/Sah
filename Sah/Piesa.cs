@@ -8,15 +8,14 @@ namespace Sah
     public class Piesa : PictureBox
     {
         private bool culoarePiesa;
-
         public bool CuloarePiesa
         {
             get { return culoarePiesa; }
             set { culoarePiesa = value; }
         }
 
-        private static bool statePiesa = false;
 
+        private static bool statePiesa = false;
         public static bool StatePiesa
         {
             get { return statePiesa; }
@@ -25,6 +24,11 @@ namespace Sah
 
 
         private static Piesa piesaApasata1 = null;
+        public static Piesa PiesaApasata
+        {
+            get { return piesaApasata1; }
+        }
+
         public void Piesa_Click(object sender, EventArgs e)
         {
 
@@ -44,18 +48,13 @@ namespace Sah
                     piesaApasata1 = null;
                     piesaApasata2.Dispose();
                 }
-                else if(piesaApasata1.culoarePiesa == piesaApasata2.culoarePiesa)
+                else if (piesaApasata1.culoarePiesa == piesaApasata2.culoarePiesa)
                 {
-                    piesaApasata1.BackColor = Color.WhiteSmoke;
+                    piesaApasata1.BackColor = Color.Blue;
                     piesaApasata1 = null;
                 }
                 statePiesa = false;
             }
-        }
-
-        public static Piesa PiesaApasata
-        {
-            get { return piesaApasata1; }
         }
 
     }
