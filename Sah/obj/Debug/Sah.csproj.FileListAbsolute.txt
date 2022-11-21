@@ -30,3 +30,13 @@ D:\Vs Saves\Sah\Sah\Sah\obj\Debug\Sah.csproj.GenerateResource.cache
 D:\Vs Saves\Sah\Sah\Sah\obj\Debug\Sah.csproj.CoreCompileInputs.cache
 D:\Vs Saves\Sah\Sah\Sah\obj\Debug\Sah.exe
 D:\Vs Saves\Sah\Sah\Sah\obj\Debug\Sah.pdb
+D:\Visual Studio\Saves\Sah\Sah\Sah\bin\Debug\Sah.exe.config
+D:\Visual Studio\Saves\Sah\Sah\Sah\bin\Debug\Sah.exe
+D:\Visual Studio\Saves\Sah\Sah\Sah\bin\Debug\Sah.pdb
+D:\Visual Studio\Saves\Sah\Sah\Sah\obj\Debug\Sah.csproj.AssemblyReference.cache
+D:\Visual Studio\Saves\Sah\Sah\Sah\obj\Debug\Sah.Form1.resources
+D:\Visual Studio\Saves\Sah\Sah\Sah\obj\Debug\Sah.Properties.Resources.resources
+D:\Visual Studio\Saves\Sah\Sah\Sah\obj\Debug\Sah.csproj.GenerateResource.cache
+D:\Visual Studio\Saves\Sah\Sah\Sah\obj\Debug\Sah.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Saves\Sah\Sah\Sah\obj\Debug\Sah.exe
+D:\Visual Studio\Saves\Sah\Sah\Sah\obj\Debug\Sah.pdb

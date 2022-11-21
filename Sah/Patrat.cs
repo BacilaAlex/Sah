@@ -5,16 +5,24 @@ namespace Sah
 {
     public class Patrat : Panel
     {
-        private int marimePatrat;
-        public Patrat(int marimePatrat = 0)
+        public Patrat(int marimePatrat = 0, int coloana = 0, int linie = 0)
         {
             this.marimePatrat = marimePatrat;
+            this.coloana = coloana;
+            this.linie = linie;
         }
 
-        public int MarimePatrat
-        {
-            get { return marimePatrat; }
-        }
+
+        private int marimePatrat;
+        public int MarimePatrat { get { return marimePatrat; } }
+
+
+        private int coloana;
+        public int Coloana { get { return coloana; } set { coloana = value; } }
+
+
+        private int linie;
+        public int Linie { get { return linie; } set { linie = value; } }
 
         static Piesa piesaApasata1;
 
@@ -30,6 +38,7 @@ namespace Sah
                     piesaApasata1.BackColor = patrat.BackColor;
                     piesaApasata1.CuloarePiesaBackColor = patrat.BackColor;
                     Piesa.StatePiesa = false;
+                    Piesa.PiesaApasata1 = null;
                 }
             }
         }

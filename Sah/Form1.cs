@@ -29,7 +29,7 @@ namespace Sah
             {
                 for (int j = 0; j < 8; j++)
                 {
-                    patrat[i, j] = new Patrat(80);
+                    patrat[i, j] = new Patrat(80, i, j);
                     patrat[i, j].Size = new Size(patrat[i, j].MarimePatrat, patrat[i, j].MarimePatrat);
                     patrat[i, j].Location = new Point(patrat[i, j].MarimePatrat * j, patrat[i, j].MarimePatrat * i);
 
