@@ -39,10 +39,5 @@ namespace Sah
                 StatePiesa = false;
             }
         }
-        public void Patrat_Click(object sender, EventArgs e)
-        {
-            Muta();
-        }
-
     }
 }

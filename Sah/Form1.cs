@@ -58,16 +58,24 @@ namespace Sah
 
                 for (int j = 0; j < 8; j++)
                 {
-                    piesa[i, j] = new Pion();
+                    piesa[i, j] = new Rege();
                     piesa[i, j].Size = new Size(80, 80);
                     piesa[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
                     piesa[i, j].BackColor = patrat[i, j].BackColor;
                     piesa[i, j].CuloarePiesaBackColor = patrat[i, j].BackColor;
 
                     if (i <= 1)
+                    {
                         piesa[i, j].Location = new Point(80 * j, 80 * i);
+                        piesa[i, j].Linie = patrat[i, j].Linie;
+                        piesa[i, j].Coloana = patrat[i, j].Coloana;
+                    }
                     else
+                    {
                         piesa[i, j].Location = new Point(80 * j, 80 * (i + 4));
+                        piesa[i, j].Linie = patrat[i + 4, j].Linie;
+                        piesa[i, j].Coloana = patrat[i + 4, j].Coloana;
+                    }
 
 
                     switch (i)

@@ -37,6 +37,8 @@ namespace Sah
                     piesaApasata1.Location = patrat.Location;
                     piesaApasata1.BackColor = patrat.BackColor;
                     piesaApasata1.CuloarePiesaBackColor = patrat.BackColor;
+                    piesaApasata1.Linie = patrat.Linie;
+                    piesaApasata1.Coloana = patrat.Coloana;
                     Piesa.StatePiesa = false;
                     Piesa.PiesaApasata1 = null;
                 }
