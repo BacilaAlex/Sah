@@ -58,7 +58,12 @@ namespace Sah
 
                 for (int j = 0; j < 8; j++)
                 {
-                    piesa[i, j] = new Rege();
+                    if (i == 1 || i == 2)
+                        piesa[i, j] = new Pion();
+                    else if ((i == 0 || i == 3) && j == 4)
+                        piesa[i, j] = new Rege();
+                    else
+                        piesa[i, j] = new RestulPieselor();
                     piesa[i, j].Size = new Size(80, 80);
                     piesa[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
                     piesa[i, j].BackColor = patrat[i, j].BackColor;
@@ -78,7 +83,7 @@ namespace Sah
                     }
 
 
-                    switch (i)
+                    /*switch (i)
                     {
                         case 1:
                             piesa[i, j].Image = Image.FromFile(@"..\..\Piese\Pion_Alb.png");
@@ -89,7 +94,7 @@ namespace Sah
                             piesa[i, j].Image = Image.FromFile(@"..\..\Piese\Pion_Negru.png");
                             piesa[i, j].CuloarePiesa = true;
                             break;
-                    }
+                    }*/
 
                     piesa[i, j].Click += piesa[i, j].Piesa_Click;
 
@@ -98,7 +103,13 @@ namespace Sah
 
                 }
             }
-
+            for (int j = 0; j < 8; j++)
+            {
+                piesa[1, j].Image = Image.FromFile(@"..\..\Piese\Pion_Alb.png");
+                piesa[1, j].CuloarePiesa = false;
+                piesa[2, j].Image = Image.FromFile(@"..\..\Piese\Pion_Negru.png");
+                piesa[2, j].CuloarePiesa = true;
+            }
             int x = 3;
             for (int j = 0; j < 8; j++)
             {

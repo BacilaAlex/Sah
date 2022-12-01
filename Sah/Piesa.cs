@@ -37,7 +37,11 @@ namespace Sah
         protected abstract void Muta();
         public void Piesa_Click(object sender, EventArgs e)
         {
-            Muta();
+            /*Am facut if-ul acesta ca metoda bastracta sa fie luata de prima piesa apasata si nu de a doua*/
+            if (PiesaApasata1 == null)
+                Muta();
+            else
+                PiesaApasata1.Muta();
         }
 
     }
