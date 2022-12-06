@@ -31,17 +31,21 @@ namespace Sah
         private static Piesa piesaApasata1 = null;
         public static Piesa PiesaApasata1 { get { return piesaApasata1; } set { piesaApasata1 = value; } }
 
+
         static bool statePiesa = false;
         public static bool StatePiesa { get { return statePiesa; } set { statePiesa = value; } }
+
+
 
         protected abstract void Muta();
         public void Piesa_Click(object sender, EventArgs e)
         {
-            /*Am facut if-ul acesta ca metoda bastracta sa fie luata de prima piesa apasata si nu de a doua*/
-            if (PiesaApasata1 == null)
+            /*Am facut if-ul acesta ca metoda abstracta ca sa fie luata de prima piesa apasata si nu de a doua*/
+            /*if (PiesaApasata1 == null)
                 Muta();
             else
-                PiesaApasata1.Muta();
+                PiesaApasata1.Muta();*/
+            Muta();
         }
 
     }

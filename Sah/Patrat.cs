@@ -24,6 +24,8 @@ namespace Sah
         private int linie;
         public int Linie { get { return linie; } set { linie = value; } }
 
+
+
         static Piesa piesaApasata1;
 
         public void Patrat_Click(object sender, EventArgs e)
