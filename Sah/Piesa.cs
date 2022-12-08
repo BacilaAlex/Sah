@@ -37,15 +37,19 @@ namespace Sah
 
 
 
-        protected abstract void Muta();
+        protected abstract void Muta(Piesa sender);
         public void Piesa_Click(object sender, EventArgs e)
         {
             /*Am facut if-ul acesta ca metoda abstracta ca sa fie luata de prima piesa apasata si nu de a doua*/
-            /*if (PiesaApasata1 == null)
-                Muta();
+            if (PiesaApasata1 == null)
+                Muta((Piesa)sender);
             else
-                PiesaApasata1.Muta();*/
-            Muta();
+            {
+                Console.WriteLine(((Piesa)sender).GetType());
+                PiesaApasata1.Muta((Piesa)sender);
+            }
+
+            /*Muta();*/
         }
 
     }

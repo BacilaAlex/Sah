@@ -10,7 +10,7 @@ namespace Sah
     {
         public Pion()
         { }
-        override protected void Muta()
+        override protected void Muta(Piesa sender)
         {
             if (StatePiesa == false)
             {
@@ -20,7 +20,7 @@ namespace Sah
             }
             else if (StatePiesa == true)
             {
-                Piesa piesaApasata2 = this;
+                Piesa piesaApasata2 = sender;
 
                 /*Am pus Piesa.culoare la final pt ca aveam un bug cand pion alb era in spate si pionul negru era in fata */
                 if (PiesaApasata1.CuloarePiesa != piesaApasata2.CuloarePiesa && PiesaApasata1.Coloana + 1 == piesaApasata2.Coloana && PiesaApasata1.CuloarePiesa == false

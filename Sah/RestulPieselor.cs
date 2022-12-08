@@ -10,7 +10,7 @@ namespace Sah
     {
         public RestulPieselor()
         { }
-        override protected void Muta()
+        override protected void Muta(Piesa sender)
         {
             if (StatePiesa == false)
             {
@@ -20,7 +20,7 @@ namespace Sah
             }
             else if (StatePiesa == true)
             {
-                Piesa piesaApasata2 = this;
+                Piesa piesaApasata2 = sender;
                 if (PiesaApasata1.CuloarePiesa != piesaApasata2.CuloarePiesa)
                 {
                     PiesaApasata1.BackColor = piesaApasata2.BackColor;
