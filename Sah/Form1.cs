@@ -64,37 +64,10 @@ namespace Sah
                         piesa[i, j] = new Rege();
                     else
                         piesa[i, j] = new RestulPieselor();
-                    piesa[i, j].Size = new Size(80, 80);
-                    piesa[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
-                    piesa[i, j].BackColor = patrat[i, j].BackColor;
-                    piesa[i, j].CuloarePiesaBackColor = patrat[i, j].BackColor;
 
-                    if (i <= 1)
-                    {
-                        piesa[i, j].Location = new Point(80 * j, 80 * i);
-                        piesa[i, j].Linie = patrat[i, j].Linie;
-                        piesa[i, j].Coloana = patrat[i, j].Coloana;
-                    }
-                    else
-                    {
-                        piesa[i, j].Location = new Point(80 * j, 80 * (i + 4));
-                        piesa[i, j].Linie = patrat[i + 4, j].Linie;
-                        piesa[i, j].Coloana = patrat[i + 4, j].Coloana;
-                    }
+                    Creare_Proprietati_la_Piese(i, j);
 
-
-                    /*switch (i)
-                    {
-                        case 1:
-                            piesa[i, j].Image = Image.FromFile(@"..\..\Piese\Pion_Alb.png");
-                            piesa[i, j].CuloarePiesa = false;
-                            break;
-
-                        case 2:
-                            piesa[i, j].Image = Image.FromFile(@"..\..\Piese\Pion_Negru.png");
-                            piesa[i, j].CuloarePiesa = true;
-                            break;
-                    }*/
+                    Creare_Locatie_la_Piese(i, j);
 
                     piesa[i, j].Click += piesa[i, j].Piesa_Click;
 
@@ -103,6 +76,26 @@ namespace Sah
 
                 }
             }
+            Creare_Img_la_Piese();
+
+        }
+        private void Creare_Locatie_la_Piese(int i, int j)
+        {
+            if (i <= 1)
+            {
+                piesa[i, j].Location = new Point(80 * j, 80 * i);
+                piesa[i, j].Linie = patrat[i, j].Linie;
+                piesa[i, j].Coloana = patrat[i, j].Coloana;
+            }
+            else
+            {
+                piesa[i, j].Location = new Point(80 * j, 80 * (i + 4));
+                piesa[i, j].Linie = patrat[i + 4, j].Linie;
+                piesa[i, j].Coloana = patrat[i + 4, j].Coloana;
+            }
+        }
+        private void Creare_Img_la_Piese()
+        {
             for (int j = 0; j < 8; j++)
             {
                 piesa[1, j].Image = Image.FromFile(@"..\..\Piese\Pion_Alb.png");
@@ -143,8 +136,13 @@ namespace Sah
                     piesa[3, j - 5].CuloarePiesa = true;
                 }
             }
-
         }
-
+        private void Creare_Proprietati_la_Piese(int i, int j)
+        {
+            piesa[i, j].Size = new Size(80, 80);
+            piesa[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
+            piesa[i, j].BackColor = patrat[i, j].BackColor;
+            piesa[i, j].CuloarePiesaBackColor = patrat[i, j].BackColor;
+        }
     }
 }

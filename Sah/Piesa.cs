@@ -8,9 +8,7 @@ namespace Sah
     public abstract class Piesa : PictureBox
     {
         public Piesa()
-        {
-
-        }
+        { }
 
         private bool culoarePiesa;
         public bool CuloarePiesa { get { return culoarePiesa; } set { culoarePiesa = value; } }
@@ -36,7 +34,6 @@ namespace Sah
         public static bool StatePiesa { get { return statePiesa; } set { statePiesa = value; } }
 
 
-
         protected abstract void Muta(Piesa sender);
         public void Piesa_Click(object sender, EventArgs e)
         {
@@ -45,11 +42,9 @@ namespace Sah
                 Muta((Piesa)sender);
             else
             {
-                Console.WriteLine(((Piesa)sender).GetType());
+                //Console.WriteLine(((Piesa)sender).GetType());
                 PiesaApasata1.Muta((Piesa)sender);
             }
-
-            /*Muta();*/
         }
 
     }

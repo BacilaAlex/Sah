@@ -25,8 +25,7 @@ namespace Sah
         public int Linie { get { return linie; } set { linie = value; } }
 
 
-
-        static Piesa piesaApasata1;
+        private static Piesa piesaApasata1;
 
         public void Patrat_Click(object sender, EventArgs e)
         {
@@ -35,12 +34,15 @@ namespace Sah
                 if (Piesa.StatePiesa == true)
                 {
                     piesaApasata1 = Piesa.PiesaApasata1;
+
                     Patrat patrat = this;
+
                     piesaApasata1.Location = patrat.Location;
                     piesaApasata1.BackColor = patrat.BackColor;
                     piesaApasata1.CuloarePiesaBackColor = patrat.BackColor;
                     piesaApasata1.Linie = patrat.Linie;
                     piesaApasata1.Coloana = patrat.Coloana;
+
                     Piesa.StatePiesa = false;
                     Piesa.PiesaApasata1 = null;
                 }

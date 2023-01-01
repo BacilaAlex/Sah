@@ -31,6 +31,7 @@ namespace Sah
                         PiesaApasata1.CuloarePiesaBackColor = piesaApasata2.CuloarePiesaBackColor;
                         PiesaApasata1.Linie = piesaApasata2.Linie;
                         PiesaApasata1.Coloana = piesaApasata2.Coloana;
+
                         PiesaApasata1 = null;
                         piesaApasata2.Dispose();
                     }

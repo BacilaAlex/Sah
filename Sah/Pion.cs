@@ -30,11 +30,13 @@ namespace Sah
                     /*Am facut if-ul pt a lua doar 3 piese pt ca daca nu lua toate piesele de pe col+1*/
                     if (piesaApasata2.Linie >= PiesaApasata1.Linie - 1 && piesaApasata2.Linie <= PiesaApasata1.Linie + 1)
                     {
+
                         PiesaApasata1.BackColor = piesaApasata2.BackColor;
                         PiesaApasata1.Location = piesaApasata2.Location;
                         PiesaApasata1.CuloarePiesaBackColor = piesaApasata2.CuloarePiesaBackColor;
                         PiesaApasata1.Linie = piesaApasata2.Linie;
                         PiesaApasata1.Coloana = piesaApasata2.Coloana;
+
                         PiesaApasata1 = null;
                         piesaApasata2.Dispose();
                     }
@@ -43,6 +45,7 @@ namespace Sah
                         PiesaApasata1.BackColor = PiesaApasata1.CuloarePiesaBackColor;
                         PiesaApasata1 = null;
                     }
+
                 }
                 else
                 {
