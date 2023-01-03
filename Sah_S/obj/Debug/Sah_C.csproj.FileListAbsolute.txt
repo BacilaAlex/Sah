@@ -1,0 +1,11 @@
+D:\Visual Saves\Sah5\Sah_C\Sah_C\bin\Debug\Sah_C.exe.config
+D:\Visual Saves\Sah5\Sah_C\Sah_C\bin\Debug\Sah_C.exe
+D:\Visual Saves\Sah5\Sah_C\Sah_C\bin\Debug\Sah_C.pdb
+D:\Visual Saves\Sah5\Sah_C\Sah_C\obj\Debug\Sah_C.csproj.AssemblyReference.cache
+D:\Visual Saves\Sah5\Sah_C\Sah_C\obj\Debug\Sah_C.csproj.SuggestedBindingRedirects.cache
+D:\Visual Saves\Sah5\Sah_C\Sah_C\obj\Debug\Sah.Form1.resources
+D:\Visual Saves\Sah5\Sah_C\Sah_C\obj\Debug\Sah_C.Properties.Resources.resources
+D:\Visual Saves\Sah5\Sah_C\Sah_C\obj\Debug\Sah_C.csproj.GenerateResource.cache
+D:\Visual Saves\Sah5\Sah_C\Sah_C\obj\Debug\Sah_C.csproj.CoreCompileInputs.cache
+D:\Visual Saves\Sah5\Sah_C\Sah_C\obj\Debug\Sah_C.exe
+D:\Visual Saves\Sah5\Sah_C\Sah_C\obj\Debug\Sah_C.pdb
