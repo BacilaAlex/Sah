@@ -23,8 +23,7 @@ namespace Sah
                 Piesa piesaApasata2 = sender;
                 if (PiesaApasata1.CuloarePiesa != piesaApasata2.CuloarePiesa)
                 {
-                    Form1.DateServer = PiesaApasata1.ToString() + " ";
-
+                    Form1.DateServer = PiesaApasata1.ToString() + " " + piesaApasata2.ToString();
 
                     PiesaApasata1.BackColor = piesaApasata2.BackColor;
                     PiesaApasata1.Location = piesaApasata2.Location;
@@ -33,12 +32,7 @@ namespace Sah
                     PiesaApasata1.Linie = piesaApasata2.Linie;
                     PiesaApasata1.Coloana = piesaApasata2.Coloana;
 
-                    Form1.DateServer += piesaApasata2.ToString();
-                    
-                    piesaApasata2.Linie = -1;
-                    piesaApasata2.Coloana = -1;
-
-
+                    Console.WriteLine(Form1.DateServer);
 
                     ScriereServer();
 

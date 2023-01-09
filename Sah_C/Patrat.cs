@@ -38,7 +38,7 @@ namespace Sah
 
                     Patrat patrat = this;
 
-                    Form1.DateClient = piesaApasata1.ToString() + " ";
+                    Form1.DateClient = piesaApasata1.ToString() + " " + patrat.ToString();
 
                     piesaApasata1.Location = patrat.Location;
                     piesaApasata1.BackColor = patrat.BackColor;
@@ -46,8 +46,8 @@ namespace Sah
                     piesaApasata1.Linie = patrat.Linie;
                     piesaApasata1.Coloana = patrat.Coloana;
 
-                    Form1.DateClient += patrat.ToString();
                     Console.WriteLine(Form1.DateClient);
+
                     ScriereClient();
 
                     Piesa.StatePiesa = false;

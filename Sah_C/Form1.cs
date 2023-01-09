@@ -53,7 +53,6 @@ namespace Sah
 
             Creare_Piese(patrat);
         }
-
         public void Creare_Piese(Patrat[,] patrat)
         {
 
@@ -85,6 +84,7 @@ namespace Sah
             Creare_Img_la_Piese();
 
         }
+
         private void Creare_Locatie_la_Piese(int i, int j)
         {
             if (i <= 1)
@@ -152,20 +152,22 @@ namespace Sah
         }
 
 
+
+
         public TcpClient client;
         public static NetworkStream clientStream;
         public bool ascult;
         public Thread t;
 
-        public static string DateClient { get; set; }
+        public static string DateClient { get; set; } = null;
 
         public void InitClient()
         {
             client = new TcpClient("127.0.0.1", 3000);
-            ascult = true;
-            t = new Thread(new ThreadStart(Asculta_client));
-            t.Start();
             clientStream = client.GetStream();
+            t = new Thread(new ThreadStart(Asculta_client));
+            ascult = true;
+            t.Start();
         }
 
         public void Asculta_client()
@@ -205,8 +207,8 @@ namespace Sah
                                     bool ok = false;
                                     for (int k = 0; k < 4; k++)
                                         for (int l = 0; l < 8; l++)
-                                        {//trebie sa pun la move la l si c -1
-                                            if (piesa[k, l].Linie == iPiesaUndeMuta && piesa[k, l].Coloana == jPiesaUndeMuta && ok == false)
+                                        {
+                                            if (piesa[k, l].Linie == iPiesaUndeMuta && piesa[k, l].Coloana == jPiesaUndeMuta && piesa[k, l].GetType().ToString() == words[3] && ok == false)
                                             {
                                                 this.Invoke(new Action(() =>
                                                 {
@@ -217,7 +219,7 @@ namespace Sah
                                                     piesa[i, j].Coloana = piesa[k, l].Coloana;
                                                     Console.WriteLine(piesa[i, j].GetType() + " " + piesa[k, l].GetType());
                                                     piesa[k, l].Dispose();
-                                                    piesa[k,l] = piesa[i, j];
+                                                    piesa[k, l] = piesa[i, j];
                                                     ok = true;
                                                 }));
                                                 break;

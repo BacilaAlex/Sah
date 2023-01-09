@@ -39,16 +39,16 @@ namespace Sah
 
                     Patrat patrat = this;
 
-                    Form1.DateServer=piesaApasata1.ToString()+" ";
-                    
+                    Form1.DateServer = piesaApasata1.ToString() + " " + patrat.ToString();
+
                     piesaApasata1.BackColor = patrat.BackColor;
                     piesaApasata1.Location = patrat.Location;
                     piesaApasata1.CuloarePiesaBackColor = patrat.BackColor;
                     piesaApasata1.Linie = patrat.Linie;
                     piesaApasata1.Coloana = patrat.Coloana;
 
-                    Form1.DateServer+=patrat.ToString();
                     Console.WriteLine(Form1.DateServer);
+
                     ScriereServer();
 
                     Piesa.StatePiesa = false;

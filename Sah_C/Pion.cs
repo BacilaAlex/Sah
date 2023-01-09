@@ -30,7 +30,7 @@ namespace Sah
                     /*Am facut if-ul pt a lua doar 3 piese pt ca daca nu lua toate piesele de pe col+1*/
                     if (piesaApasata2.Linie >= PiesaApasata1.Linie - 1 && piesaApasata2.Linie <= PiesaApasata1.Linie + 1)
                     {
-                        Form1.DateClient = PiesaApasata1.ToString() + " ";
+                        Form1.DateClient = PiesaApasata1.ToString() + " " + piesaApasata2.ToString();
 
                         PiesaApasata1.BackColor = piesaApasata2.BackColor;
                         PiesaApasata1.Location = piesaApasata2.Location;
@@ -38,9 +38,8 @@ namespace Sah
                         PiesaApasata1.Linie = piesaApasata2.Linie;
                         PiesaApasata1.Coloana = piesaApasata2.Coloana;
 
-                        Form1.DateClient += piesaApasata2.ToString();
-
                         Console.WriteLine(Form1.DateClient);
+
                         ScriereClient();
 
                         PiesaApasata1 = null;

@@ -47,13 +47,14 @@ namespace Sah
                 PiesaApasata1.Muta((Piesa)sender);
             }
         }
+        
 
         public void ScriereClient()
         {
 
             StreamWriter scriere = new StreamWriter(Form1.clientStream);
-            scriere.WriteLine(Form1.DateClient); 
             scriere.AutoFlush = true; // enable automatic flushing
+            scriere.WriteLine(Form1.DateClient);
         }
         public override string ToString()
         {

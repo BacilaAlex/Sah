@@ -78,8 +78,8 @@ namespace Sah
                     piesa[i, j].Click += piesa[i, j].Piesa_Click;
 
                     Controls.Add(piesa[i, j]);
-                    piesa[i, j].BringToFront();
 
+                    piesa[i, j].BringToFront();
                 }
             }
             Creare_Img_la_Piese();
@@ -160,18 +160,15 @@ namespace Sah
         public bool ascult;
         public Thread t;
 
-        private static string dateServer = null;
-        public static string DateServer { get { return dateServer; } set { dateServer = value; } }
+        public static string DateServer { get; set; } = null;
 
 
         public void InitServer()
         {
             server = new TcpListener(System.Net.IPAddress.Any, 3000);
             server.Start();
-
             t = new Thread(new ThreadStart(Asculta_Server));
             ascult = true;
-
             t.Start();
         }
 
@@ -189,15 +186,13 @@ namespace Sah
                     while (ascult)
                     {
 
-                        dateServer = citireServer.ReadLine();
+                        DateServer = citireServer.ReadLine();
 
-                        if (dateServer == null)
-                            break;//primesc nimic - clientul a plecat
-                        if (dateServer == "#Gata") //ca sa pot sa inchid serverul
-                            ascult = false;
-                        if (dateServer != null)
+                        if (DateServer == null)
+                            break;//clientul a plecat
+                        if (DateServer != null)
                         {
-                            string[] words = dateServer.Split(' ');
+                            string[] words = DateServer.Split(' ');
                             int iPiesaMuta = Int32.Parse(words[1]);
                             int jPiesaMuta = Int32.Parse(words[2]);
                             int iPiesaUndeMuta = Int32.Parse(words[4]);
@@ -226,7 +221,7 @@ namespace Sah
                                             for (int k = 0; k < 4; k++)
                                                 for (int l = 0; l < 8; l++)
                                                 {
-                                                    if (piesa[k, l].Linie == iPiesaUndeMuta && piesa[k, l].Coloana == jPiesaUndeMuta && ok == false)
+                                                    if (piesa[k, l].Linie == iPiesaUndeMuta && piesa[k, l].Coloana == jPiesaUndeMuta && piesa[k, l].GetType().ToString() == words[3] && ok == false)
                                                     {
                                                         this.Invoke(new Action(() =>
                                                         {
